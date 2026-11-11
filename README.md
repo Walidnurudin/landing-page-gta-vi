@@ -29,8 +29,17 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Netlify
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The site is configured for Netlify in `netlify.toml` (`npm run build`, publish `.next`, Node 24). Netlify's OpenNext adapter handles Next.js 16 routing, images and caching automatically — no extra plugin or build flags.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Connect `Walidnurudin/landing-page-gta-vi` in the Netlify dashboard and deploy the `master` branch. Every push to `master` then triggers a production deploy; other branches get deploy previews.
+
+To deploy from the CLI instead:
+
+```bash
+npx netlify-cli link    # link this checkout to a Netlify site
+npx netlify-cli deploy --build --prod
+```
+
+Check out the [Netlify Next.js docs](https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/) for details.
